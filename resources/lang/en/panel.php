@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'csv imposrt',
+    'site_title' => 'csv import',
 ];

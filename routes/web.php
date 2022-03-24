@@ -29,6 +29,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('properties/destroy', 'PropertyController@massDestroy')->name('properties.massDestroy');
     Route::post('properties/media', 'PropertyController@storeMedia')->name('properties.storeMedia');
     Route::post('properties/ckmedia', 'PropertyController@storeCKEditorImages')->name('properties.storeCKEditorImages');
+    Route::post('properties/parse-csv-import', 'PropertyController@parseCsvImport')->name('properties.parseCsvImport');
+    Route::post('properties/process-csv-import', 'PropertyController@processCsvImport')->name('properties.processCsvImport');
     Route::resource('properties', 'PropertyController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
